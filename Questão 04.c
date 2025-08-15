@@ -1,27 +1,21 @@
 #include <stdio.h>
 
-int main(void) {
-    int velocidade;
+int main() {
+    float velocidade;
 
-    printf("Com que velocidade você costuma dirigir? ");
-    scanf("%d", &velocidade);
+    printf("Qual a velocidade em que vc costuma dirigir? ");
+    scanf("%f", &velocidade);
 
     if (velocidade > 75) {
-        printf("Guarda: Você está indo muito rápido!\n");
+        printf("Guarda: Você esta muito acima do limite!!\n");
+    } else if (velocidade > 65) {
+        printf("Guarda: Você esta acima do limite!!\n");
+    } else if (velocidade > 55) {
+        printf("Guarda: Velocidade um pouco alta, cuidado no trânsito!!\n");
+    } else if (velocidade > 45) {
+        printf("Guarda: Velocidade no limite, parabens.\n");
     } else {
-       if (velocidade > 65) {
-     printf("Guarda: Você ultrapassou o limite!\n");
-    } else {
-       if (velocidade == 55) {
-     printf("Guarda: Velocidade permitida (55 km/h)\n");
-     } else {
-       if (velocidade > 45) {
-     printf("Guarda: Dirigindo bem, mas ainda encima do ideal.\n");
-    } else {
-     printf("Guarda: Você está bem dentro dos limite!\n");
-                }
-            }
-        }
+        printf("Guarda: Voce esta abaixo do limite, pode acelerar um pouquinhoo\n");
     }
 
     return 0;
