@@ -2,9 +2,9 @@
 
 int main() {
     int quantidade, numero;
-    int maior, contador_do_maior = 0;
+    int maior, contador = 0;
 
-    printf("Quantos numeros deseja digitar? ");
+    printf("Quantos numeros você deseja:  ");
     scanf("%d", &quantidade);
 
     for (int i = 0; i < quantidade; i++) {
@@ -13,19 +13,19 @@ int main() {
 
         if (i == 0) { 
             maior = numero;
-            contador_do_maior = 1;
+            contador = 1;
         } 
         else if (numero > maior) { 
             maior = numero;
-            contador_do_maior = 1; 
+            contador = 1; 
         } 
         else if (numero == maior) { 
-            contador_do_maior++;
+            contador ++;
         }
     }
 
     printf("\nMaior numero: %d", maior);
-    printf("\nQuantidade de vezes que o maior numero foi lido: %d\n", contador_do_maior);
+    printf("\nQuantidade de vezes que o maior numero foi lido: %d\n", contador );
 
     return 0;
 }
